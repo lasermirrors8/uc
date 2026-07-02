@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Independent Sports Archives</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ink: { DEFAULT: 'var(--color-ink)', muted: 'var(--color-ink-muted)' },
+              paper: { light: 'var(--color-paper-light)', dark: 'var(--color-paper-dark)' },
+              accent: { red: 'var(--color-accent-red)', gold: 'var(--color-accent-gold)' }
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              serif: ['Playfair Display', 'serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      :root {
+        --color-paper-light: #FDFCF8;
+        --color-paper-dark: #F5F3EB;
+        --color-ink: #111111;
+        --color-ink-muted: #4e4e4e;
+        --color-accent-gold: #B58E4C;
+        --color-accent-red: #DC2626;
+      }
+      body { background-color: var(--color-paper-light); color: var(--color-ink); font-family: 'Inter', sans-serif; transition: background-color 0.3s ease, color 0.3s ease; }
+      .paper-texture {
+        background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+      }
+    </style>
+</head>
+<body class="paper-texture min-h-screen flex flex-col bg-paper-light text-ink">
+    <header class="border-b-4 border-ink py-6 mb-8 text-center px-4 max-w-5xl mx-auto w-full">
+        <div class="flex items-center justify-center gap-2 mb-1">
+            <span class="w-2.5 h-2.5 rounded-full bg-accent-red animate-pulse"></span>
+            <span class="font-mono text-[10px] tracking-widest uppercase font-bold text-accent-red">Daily Dispatch Archives</span>
+        </div>
+        <h1 class="font-serif font-black text-3xl md:text-5xl uppercase tracking-tighter" id="globalTitle">THE ARCHIVE EDITIONS</h1>
+        <p class="font-mono text-xs uppercase tracking-widest text-ink-muted mt-2 border-y border-ink inline-block py-1 px-4" id="globalTagline">Multi-Sport Historical Dispatches</p>
+    </header>
+
+    <!-- Sport Tabs Navigation -->
+    <div class="max-w-4xl mx-auto px-4 mb-6 w-full">
+        <div class="flex flex-wrap gap-2 justify-center border-b border-ink/20 pb-4" id="sportTabsContainer">
+            <!-- Dynamically populated -->
+        </div>
+    </div>
+
+    <div class="max-w-4xl mx-auto px-4 mb-8 w-full flex flex-col sm:flex-row gap-4 justify-between items-center">
+        <input type="text" id="searchInput" placeholder="Search archives..." class="w-full sm:w-64 bg-paper-dark border border-ink px-3 py-2 text-sm font-mono focus:outline-none focus:ring-1 focus:ring-accent-red">
+        <select id="sortSelect" class="w-full sm:w-auto bg-paper-dark border border-ink px-3 py-2 text-sm font-mono focus:outline-none focus:ring-1 focus:ring-accent-red">
+            <option value="newest">Newest First</option>
+            <option value="oldest">Oldest First</option>
+            <option value="a-z">A-Z</option>
+            <option value="z-a">Z-A</option>
+        </select>
+    </div>
+
+    <main class="max-w-4xl mx-auto px-4 pb-8 space-y-12 w-full flex-1" id="articlesContainer">
+        <!-- Grouped Articles injected here -->
+    </main>
+
+    <div class="max-w-4xl mx-auto px-4 pb-16 w-full flex justify-between items-center font-mono text-sm" id="paginationContainer">
+        <button id="prevBtn" class="bg-ink text-paper-light px-4 py-2 uppercase tracking-widest hover:bg-ink-muted transition-colors disabled:opacity-50 disabled:cursor-not-allowed">Previous</button>
+        <span id="pageInfo" class="uppercase tracking-widest font-bold"></span>
+        <button id="nextBtn" class="bg-ink text-paper-light px-4 py-2 uppercase tracking-widest hover:bg-ink-muted transition-colors disabled:opacity-50 disabled:cursor-not-allowed">Next</button>
+    </div>
+
+    <footer class="bg-ink text-paper-dark py-6 text-center text-xs font-mono uppercase tracking-widest mt-auto border-t border-ink">
+        © ${new Date().getFullYear()} INDEPENDENT ARCHIVES • ALL RIGHTS RESERVED
+    </footer>
+
+    <script>
+        const allArticles = [{"id":"user-art-1782963327792","title":"The English Spirit Triumphs in a Fiery Clash","subtitle":"A spirited performance secures passage to the World Cup for the Lionhearts.","author":"Arthur Pendelton","date":"TODAY'S DISPATCH","category":"regional","content":"The hallowed turf witnessed a contest of contrasting styles, where the English side, fueled by the very soul of the game, asserted their dominance over their Congolese adversaries. The match, a testament to enduring footballing romance, concluded with a decisive scoreline of 2-1 in favour of England. The narrative of the day was woven through moments of sharp execution and sheer will. B. Cipenga’s strike from the seventh minute, assisted by C. Mbemba, set the tone early in the contest. Later, the artistry of H. Kane shone through, delivering a crucial assist from A. Gordon in the 75th minute, and another in the 86th, cementing the English claim. The journey continues; this victory paves the way for England's participation in the 2026 World Cup.","readTime":"5 minutes","pullQuote":"'The English spirit burns bright on this pitch, a true display of grit and history.'","promotionName":"2026 World Cup","isUserDraft":true,"engineMode":"sports","sport":"soccer","publishedDate":"2026-07-02","tags":["soccer","2026 world cup","england","dr congo"],"promptDetails":{"fighterA":"England","fighterB":"DR Congo","outcome":"Win 2 - FT - 1","fightDetails":"+-------------------------------------+\n| Round of 32                         |\n|                                    \nEngland\nDR Congo\n |\n|                                    \n2 - FT - 1\n |\n|                                     |\n|                       B. Cipenga 7' |\n|              assist by C. Mbemba    |\n| 19' #yellow J. Bellingham           |\n|               N. Sadiki #yellow 27' |\n| 75' H. Kane                         |\n|     assist by A. Gordon             |\n| 86' H. Kane                         |\n|     assist by A. Gordon  ","writingTone":"classic-print","promotionName":"2026 World Cup"}}];
+        const MASTHEADS = {"all_mma":{"title":"The Undercard Chronicle","tagline":"Independent Fighting Dispatches"},"all_sports":{"title":"The Grandstand Chronicle","tagline":"Independent Sports & Grassroots Reports"},"boxing":{"title":"The Ring & Bell Gazette","tagline":"Raw Ringsides, Bare Bulbs, and Local Fighters"},"wrestling":{"title":"The Mat & Lever Chronicles","tagline":"Suffocating Grinds & Folkstyle Lineage"},"muaythai":{"title":"The Eight Limbs Dispatch","tagline":"Cracking Shins, Liver Knees, and Direct Prose"},"basketball":{"title":"The Court & Hoop Reporter","tagline":"Gary Nighthawks, Rec Court Legends, and Late Night Hoops"},"baseball":{"title":"The Steel Yard Ledger","tagline":"Dirt Fields, Bat Cracks, and Scrapyard Complete Games"},"soccer":{"title":"The District Pitch Chronicle","tagline":"Goalkeeping Walls, Local Fisherman Supporters, and Postal Runs"},"hockey":{"title":"The Beer League Ice Courier","tagline":"11:30 PM Midnight Shifts, Shinblock Defense, and Nova Scotia Pond Ice"}};
+        const PALETTES = {"all_mma":{"paperLight":"#FDFCF8","paperDark":"#F5F3EB","ink":"#111111","inkMuted":"#4e4e4e","accentGold":"#B58E4C","accentRed":"#DC2626"},"all_sports":{"paperLight":"#FDFCF8","paperDark":"#F5F3EB","ink":"#111111","inkMuted":"#4e4e4e","accentGold":"#B58E4C","accentRed":"#DC2626"},"boxing":{"paperLight":"#FAF9F5","paperDark":"#EFEDE4","ink":"#1c1613","inkMuted":"#5c524c","accentGold":"#b08e4f","accentRed":"#9c1c1c"},"wrestling":{"paperLight":"#F3F6FA","paperDark":"#E6EDF5","ink":"#142544","inkMuted":"#4d6185","accentGold":"#cca01a","accentRed":"#bd2b2b"},"muaythai":{"paperLight":"#FBF9F4","paperDark":"#F5EEDC","ink":"#442B15","inkMuted":"#785A3F","accentGold":"#cca025","accentRed":"#941b1b"},"basketball":{"paperLight":"#FDF8F2","paperDark":"#F6ECD9","ink":"#0B2340","inkMuted":"#4C617A","accentGold":"#dc6d38","accentRed":"#dc422e"},"baseball":{"paperLight":"#F4F7F2","paperDark":"#E5ECE2","ink":"#33271F","inkMuted":"#6B5749","accentGold":"#285c3f","accentRed":"#a81c20"},"soccer":{"paperLight":"#F7FAF7","paperDark":"#E7EFE7","ink":"#0B1A13","inkMuted":"#445E50","accentGold":"#1e7f6e","accentRed":"#d15338"},"hockey":{"paperLight":"#F3F7FA","paperDark":"#E2ECF2","ink":"#111921","inkMuted":"#4D5E6E","accentGold":"#3a81c4","accentRed":"#b81220"}};
+
+        const searchInput = document.getElementById('searchInput');
+        const sortSelect = document.getElementById('sortSelect');
+        const articlesContainer = document.getElementById('articlesContainer');
+        const sportTabsContainer = document.getElementById('sportTabsContainer');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const pageInfo = document.getElementById('pageInfo');
+        const globalTitle = document.getElementById('globalTitle');
+        const globalTagline = document.getElementById('globalTagline');
+
+        let selectedSportFilter = 'all';
+        let filteredArticles = [...allArticles];
+        let currentPage = 1;
+        const itemsPerPage = 8;
+
+        function applyTheme(sportKey) {
+            const currentMode = 'sports';
+            const mastheadKey = sportKey === 'all' ? (currentMode === 'mma' ? 'all_mma' : 'all_sports') : sportKey;
+            const p = PALETTES[mastheadKey] || PALETTES.all_mma;
+            
+            document.documentElement.style.setProperty('--color-paper-light', p.paperLight);
+            document.documentElement.style.setProperty('--color-paper-dark', p.paperDark);
+            document.documentElement.style.setProperty('--color-ink', p.ink);
+            document.documentElement.style.setProperty('--color-ink-muted', p.inkMuted);
+            document.documentElement.style.setProperty('--color-accent-gold', p.accentGold);
+            document.documentElement.style.setProperty('--color-accent-red', p.accentRed);
+
+            const m = MASTHEADS[mastheadKey] || MASTHEADS.all_mma;
+            globalTitle.textContent = m.title.toUpperCase();
+            globalTagline.textContent = m.tagline.toUpperCase();
+        }
+
+        function getArticleSportKey(article) {
+            return article.sport || 'all';
+        }
+
+        function renderTabs() {
+            const sportsList = ['all', 'boxing', 'wrestling', 'muaythai', 'basketball', 'baseball', 'soccer', 'hockey'];
+            sportTabsContainer.innerHTML = '';
+            
+            sportsList.forEach(sport => {
+                const btn = document.createElement('button');
+                btn.className = `px-3 py-1 font-mono text-[10px] uppercase border border-ink/30 transition-all rounded-xs ${
+                    selectedSportFilter === sport ? 'bg-ink text-paper-light border-ink' : 'bg-paper-dark hover:bg-paper-light text-ink'
+                }`;
+                btn.textContent = sport.toUpperCase();
+                btn.addEventListener('click', () => {
+                    selectedSportFilter = sport;
+                    currentPage = 1;
+                    applyTheme(sport);
+                    renderTabs();
+                    handleFilterAndSort();
+                });
+                sportTabsContainer.appendChild(btn);
+            });
+        }
+
+        function escapeHTML(str) {
+            if (!str) return '';
+            return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+        }
+
+        function renderArticles() {
+            const displayPool = selectedSportFilter === 'all' 
+                ? filteredArticles 
+                : filteredArticles.filter(art => getArticleSportKey(art) === selectedSportFilter);
+
+            const startIndex = (currentPage - 1) * itemsPerPage;
+            const displayedArticles = displayPool.slice(startIndex, startIndex + itemsPerPage);
+
+            articlesContainer.innerHTML = '';
+
+            if (displayedArticles.length === 0) {
+                articlesContainer.innerHTML = `<div class="text-center font-serif italic py-12 text-ink-muted">No dispatches found.</div>`;
+                updatePagination(0);
+                return;
+            }
+
+            // Group by category for classic layout
+            const groups = {};
+            displayedArticles.forEach(art => {
+                const cat = art.category || 'news';
+                if (!groups[cat]) groups[cat] = [];
+                groups[cat].push(art);
+            });
+
+            Object.keys(groups).forEach(cat => {
+                const catArticles = groups[cat];
+                let sectionHtml = `
+                    <section class="border-t border-ink pt-4">
+                        <span class="font-mono text-[10px] tracking-widest text-accent-red font-black uppercase mb-4 block">★ ${cat.toUpperCase()} ★</span>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                `;
+
+                catArticles.forEach(article => {
+                    const contentHtml = escapeHTML(article.content).replace(/\\n/g, '<br><br>');
+                    const pullQuoteHtml = article.pullQuote ? `<div class="font-serif italic border-l-2 border-accent-gold pl-3 py-1 text-xs text-ink-muted mb-3">"${escapeHTML(article.pullQuote)}"</div>` : '';
+                    
+                    sectionHtml += `
+                        <article class="flex flex-col justify-between space-y-4">
+                            <div>
+                                <span class="font-mono text-[9px] tracking-widest text-accent-gold font-bold uppercase block mb-1">${escapeHTML(article.promotionName || 'Regional Circuit')}</span>
+                                <h3 class="font-serif font-black text-xl hover:text-accent-red transition-colors mb-2 uppercase leading-snug">${escapeHTML(article.title)}</h3>
+                                <p class="font-serif italic text-xs text-ink-muted mb-3">${escapeHTML(article.subtitle)}</p>
+                                <div class="font-serif text-sm text-justify leading-relaxed opacity-95 space-y-3 mb-4 max-h-48 overflow-y-auto pr-1">
+                                    ${contentHtml}
+                                </div>
+                            </div>
+                            
+                            <div>
+                                ${pullQuoteHtml}
+                                <div class="flex justify-between items-center text-[9px] font-mono opacity-75 uppercase pt-2 border-t border-ink/10">
+                                    <span>By ${escapeHTML(article.author)} ${article.publishedDate ? ` | 📅 ${escapeHTML(article.publishedDate)}` : ''}</span>
+                                    <span>${escapeHTML(article.date)}</span>
+                                </div>
+                                ${article.tags && article.tags.length > 0 ? `
+                                <div class="flex flex-wrap gap-1 mt-2">
+                                    ${article.tags.map(tag => `<span class="font-mono text-[8px] bg-accent-gold/15 text-ink px-1.5 py-0.5 rounded border border-accent-gold/10">#${escapeHTML(tag)}</span>`).join('')}
+                                </div>
+                                ` : ''}
+                            </div>
+                        </article>
+                    `;
+                });
+
+                sectionHtml += `
+                        </div>
+                    </section>
+                `;
+
+                articlesContainer.innerHTML += sectionHtml;
+            });
+
+            updatePagination(displayPool.length);
+        }
+
+        function updatePagination(totalCount) {
+            const totalPages = Math.ceil(totalCount / itemsPerPage) || 1;
+            pageInfo.textContent = `PAGE ${currentPage} OF ${totalPages}`;
+            prevBtn.disabled = currentPage === 1;
+            nextBtn.disabled = currentPage === totalPages;
+        }
+
+        function handleFilterAndSort() {
+            const query = searchInput.value.toLowerCase();
+            const sort = sortSelect.value;
+
+            filteredArticles = allArticles.filter(a => 
+                (a.title || '').toLowerCase().includes(query) || 
+                (a.subtitle || '').toLowerCase().includes(query) ||
+                (a.content || '').toLowerCase().includes(query) ||
+                (a.category || '').toLowerCase().includes(query) ||
+                (a.author || '').toLowerCase().includes(query) ||
+                (a.promotionName || '').toLowerCase().includes(query) ||
+                (a.tags ? a.tags.some(tag => tag.toLowerCase().includes(query)) : false)
+            );
+
+            filteredArticles.sort((a, b) => {
+                const getSortVal = (art) => {
+                    const m = art.id.match(/\d+$/);
+                    return m ? parseInt(m[0]) : 0;
+                };
+                if (sort === 'newest') return getSortVal(b) - getSortVal(a);
+                if (sort === 'oldest') return getSortVal(a) - getSortVal(b);
+                if (sort === 'a-z') return (a.title || '').localeCompare(b.title || '');
+                if (sort === 'z-a') return (b.title || '').localeCompare(a.title || '');
+                return 0;
+            });
+
+            currentPage = 1;
+            renderArticles();
+        }
+
+        prevBtn.addEventListener('click', () => {
+            if (currentPage > 1) {
+                currentPage--;
+                renderArticles();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        });
+
+        nextBtn.addEventListener('click', () => {
+            const displayedCount = selectedSportFilter === 'all' ? filteredArticles.length : filteredArticles.filter(art => getArticleSportKey(art) === selectedSportFilter).length;
+            const totalPages = Math.ceil(displayedCount / itemsPerPage);
+            if (currentPage < totalPages) {
+                currentPage++;
+                renderArticles();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        });
+
+        searchInput.addEventListener('input', handleFilterAndSort);
+        sortSelect.addEventListener('change', handleFilterAndSort);
+
+        // Initial setup
+        applyTheme('all');
+        renderTabs();
+        handleFilterAndSort();
+    </script>
+</body>
+</html>
