@@ -1,1 +1,119 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The District Pitch Chronicle</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink: { DEFAULT: 'var(--color-ink)', muted: 'var(--color-ink-muted)' },
+          paper: { light: 'var(--color-paper-light)', dark: 'var(--color-paper-dark)' },
+          accent: { red: 'var(--color-accent-red)', gold: 'var(--color-accent-gold)' }
+        },
+        fontFamily: {
+          sans: ['Inter', 'sans-serif'],
+          serif: ['Playfair Display', 'serif'],
+          mono: ['JetBrains Mono', 'monospace']
+        }
+      }
+    }
+  }
+</script>
+<style>
+  :root {
+    --color-paper-light: #F7FAF7;
+    --color-paper-dark: #E7EFE7;
+    --color-ink: #0B1A13;
+    --color-ink-muted: #445E50;
+    --color-accent-gold: #1e7f6e;
+    --color-accent-red: #d15338;
+  }
+  body { background-color: var(--color-paper-light); color: var(--color-ink); font-family: 'Inter', sans-serif; }
+</style>
+</head>
+<body class="min-h-screen">
+  <header class="border-b-4 border-ink py-8 mb-10 text-center px-4 max-w-4xl mx-auto">
+    <h1 class="font-serif font-black text-4xl md:text-6xl uppercase tracking-tight text-ink">The District Pitch Chronicle</h1>
+    <p class="font-mono text-xs uppercase tracking-widest text-ink-muted mt-3 border-y border-ink inline-block py-1.5 px-6">Goalkeeping Walls, Local Fisherman Supporters, and Postal Runs</p>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 pb-16">
+    <section class="mb-14">
+      
+    <article class="border-2 border-ink p-6 mb-10 bg-paper-light rounded-sm shadow-[6px_6px_0px_0px_var(--color-ink)]">
+      <span class="font-mono text-[10px] uppercase tracking-widest text-accent-red font-bold">★ regional ★</span>
+      <h2 class="font-serif font-black text-3xl md:text-4xl uppercase leading-tight mt-2 mb-2 text-ink">The English Spirit Triumphs in a Fiery Clash</h2>
+      <p class="font-serif italic text-ink-muted mb-3">A spirited performance secures passage to the World Cup for the Lionhearts.</p>
+      <p class="font-mono text-[10px] uppercase text-ink-muted mb-4">By Arthur Pendelton • TODAY&#039;S DISPATCH • 5 minutes</p>
+      <blockquote class="border-l-4 border-accent-red pl-4 italic font-serif text-lg text-ink my-4">"&#039;The English spirit burns bright on this pitch, a true display of grit and history.&#039;"</blockquote>
+      <div class="font-serif text-sm leading-relaxed text-ink space-y-3"><p>The hallowed turf witnessed a contest of contrasting styles, where the English side, fueled by the very soul of the game, asserted their dominance over their Congolese adversaries. The match, a testament to enduring footballing romance, concluded with a decisive scoreline of 2-1 in favour of England. The narrative of the day was woven through moments of sharp execution and sheer will. B. Cipenga’s strike from the seventh minute, assisted by C. Mbemba, set the tone early in the contest. Later, the artistry of H. Kane shone through, delivering a crucial assist from A. Gordon in the 75th minute, and another in the 86th, cementing the English claim. The journey continues; this victory paves the way for England&#039;s participation in the 2026 World Cup.</p></div>
+    </article>
+  
+      
+    </section>
+
+    
+    <section class="mb-14">
+      <h2 class="font-serif font-black text-2xl uppercase border-b-2 border-ink pb-2 mb-6 text-ink">Roster Directory</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+    <div class="border-2 border-ink p-4 bg-paper-light rounded-sm">
+      <h4 class="font-serif font-black text-lg uppercase text-ink">DR Congo</h4>
+      <p class="font-mono text-[10px] uppercase text-ink-muted mb-1">0-0 • Athlete</p>
+      <p class="font-mono text-[10px] text-ink-muted mb-2">Unknown</p>
+      <p class="font-serif text-xs text-ink leading-relaxed">DR Congo is an active competitor in grassroots sports, recently featured in a matchup for 2026 World Cup.</p>
+    </div>
+  </div>
+    </section>
+
+    
+    <section class="mb-14">
+      <h2 class="font-serif font-black text-2xl uppercase border-b-2 border-ink pb-2 mb-6 text-ink">Federations & Leagues</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+    <div class="border border-ink/30 p-4 bg-paper-light rounded-sm">
+      <h4 class="font-serif font-black text-base uppercase text-ink">District Amateur Cup (DAC)</h4>
+      <p class="font-mono text-[9px] uppercase text-ink-muted mb-2">East London, United Kingdom • Regional Amateur Cup</p>
+      <p class="font-serif text-xs text-ink leading-relaxed">A knockout cup competition run by the local district football association, drawing Sunday-league clubs from across East London into a fiercely-contested annual tournament.</p>
+    </div>
+  
+
+    <div class="border border-ink/30 p-4 bg-paper-light rounded-sm">
+      <h4 class="font-serif font-black text-base uppercase text-ink">Amateur Cup (AC)</h4>
+      <p class="font-mono text-[9px] uppercase text-ink-muted mb-2">Brittany, France • Regional Amateur Cup</p>
+      <p class="font-serif text-xs text-ink leading-relaxed">A regional French amateur competition contested by coastal village clubs, known for passionate local support and pitches often battered by Atlantic winds and rain.</p>
+    </div>
+  
+
+    <div class="border border-ink/30 p-4 bg-paper-light rounded-sm">
+      <h4 class="font-serif font-black text-base uppercase text-ink">Coastal Amateur League (CAL)</h4>
+      <p class="font-mono text-[9px] uppercase text-ink-muted mb-2">Cornwall, United Kingdom • Regional Coastal League</p>
+      <p class="font-serif text-xs text-ink leading-relaxed">A league of fishing-village clubs along the Cornish coast, with matches often attended by trawler crews and dockworkers scheduling their days around kickoff times.</p>
+    </div>
+  
+
+    <div class="border border-ink/30 p-4 bg-paper-light rounded-sm">
+      <h4 class="font-serif font-black text-base uppercase text-ink">Northgate Sunday League (NSL)</h4>
+      <p class="font-mono text-[9px] uppercase text-ink-muted mb-2">Manchester, United Kingdom • Regional Sunday League</p>
+      <p class="font-serif text-xs text-ink leading-relaxed">A no-frills Sunday morning league playing on public park pitches across Greater Manchester, famous for muddy conditions and post-match pints at the local pub.</p>
+    </div>
+  
+
+    <div class="border border-ink/30 p-4 bg-paper-light rounded-sm">
+      <h4 class="font-serif font-black text-base uppercase text-ink">Metro Women&#039;s Amateur League (MWAL)</h4>
+      <p class="font-mono text-[9px] uppercase text-ink-muted mb-2">Chicago, Illinois, USA • Regional Women&#039;s League</p>
+      <p class="font-serif text-xs text-ink leading-relaxed">A fast-growing women&#039;s amateur league across the greater Chicago area, filling a gap left by limited professional opportunities and drawing former college standouts back to the pitch.</p>
+    </div>
+  </div>
+    </section>
+  </main>
+
+  <footer class="border-t-2 border-ink py-6 text-center font-mono text-[10px] uppercase tracking-widest text-ink-muted">
+    © 2026 The District Pitch Chronicle • Static Archive Export • All Rights Reserved
+  </footer>
+</body>
+</html>
