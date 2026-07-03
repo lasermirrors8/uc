@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UFC 329: McGregor vs. Holloway 2 — Fight Preview Portal</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink: { DEFAULT: 'var(--color-ink)', muted: 'var(--color-ink-muted)' },
+          paper: { light: 'var(--color-paper-light)', dark: 'var(--color-paper-dark)' },
+          accent: { red: 'var(--color-accent-red)', gold: 'var(--color-accent-gold)' }
+        },
+        fontFamily: {
+          sans: ['Inter', 'sans-serif'],
+          serif: ['Playfair Display', 'serif'],
+          mono: ['JetBrains Mono', 'monospace']
+        }
+      }
+    }
+  }
+</script>
+<style>
+  :root {
+    --color-paper-light: #FDFCF8;
+    --color-paper-dark: #F5F3EB;
+    --color-ink: #111111;
+    --color-ink-muted: #4e4e4e;
+    --color-accent-gold: #B58E4C;
+    --color-accent-red: #DC2626;
+  }
+  body { background-color: var(--color-paper-light); color: var(--color-ink); font-family: 'Inter', sans-serif; }
+  /* Custom scrollbar matching the brutalist theme */
+  ::-webkit-scrollbar { width: 8px; }
+  ::-webkit-scrollbar-track { background: var(--color-paper-dark); }
+  ::-webkit-scrollbar-thumb { background: var(--color-ink); }
+</style>
+</head>
+<body class="min-h-screen lg:pl-64">
+
+  <!-- SIDE NAVIGATION TO NAVIGATE THE 13-FIGHT CARD -->
+  <nav class="hidden lg:block fixed top-0 left-0 bottom-0 w-64 bg-paper-dark border-r-4 border-ink p-6 overflow-y-auto z-50">
+    <div class="mb-6 border-b border-ink/20 pb-4">
+      <p class="font-mono text-[10px] uppercase tracking-widest text-accent-red font-bold">Event Navigation</p>
+      <h3 class="font-serif font-black text-lg tracking-tight uppercase mt-1">UFC 329 Portal</h3>
+    </div>
+    
+    <div class="space-y-6 text-xs font-mono">
+      <div>
+        <p class="text-[10px] uppercase tracking-wider text-accent-red font-bold mb-2">✦ Main Card</p>
+        <ul class="space-y-1.5 pl-2 border-l border-ink/20">
+          <li><a href="#fight-1" class="hover:text-accent-red transition-colors block truncate">McGregor vs Holloway 2</a></li>
+          <li><a href="#fight-2" class="hover:text-accent-red transition-colors block truncate">Pimblett vs Saint Denis</a></li>
+          <li><a href="#fight-3" class="hover:text-accent-red transition-colors block truncate">Bautista vs Sandhagen</a></li>
+          <li><a href="#fight-4" class="hover:text-accent-red transition-colors block truncate">Kavanagh vs Royval</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-[10px] uppercase tracking-wider text-accent-gold font-bold mb-2">✦ Preliminary Card</p>
+        <ul class="space-y-1.5 pl-2 border-l border-ink/20">
+          <li><a href="#fight-5" class="hover:text-accent-gold transition-colors block truncate">McKinney vs Green</a></li>
+          <li><a href="#fight-6" class="hover:text-accent-gold transition-colors block truncate">Krylov vs Whittaker</a></li>
+          <li><a href="#fight-7" class="hover:text-accent-gold transition-colors block truncate">Ellison vs Steveson</a></li>
+          <li><a href="#fight-8" class="hover:text-accent-gold transition-colors block truncate">Yanez vs Garbrandt</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-[10px] uppercase tracking-wider text-ink-muted font-bold mb-2">✦ Early Prelims</p>
+        <ul class="space-y-1.5 pl-2 border-l border-ink/20">
+          <li><a href="#fight-9" class="hover:text-ink transition-colors block truncate">Riley vs Kamaka III</a></li>
+          <li><a href="#fight-10" class="hover:text-ink transition-colors block truncate">Wang vs Cortez</a></li>
+          <li><a href="#fight-11" class="hover:text-ink transition-colors block truncate">Almeida vs Pinas</a></li>
+          <li><a href="#fight-12" class="hover:text-ink transition-colors block truncate">Reese vs Gandra</a></li>
+          <li><a href="#fight-13" class="hover:text-ink transition-colors block truncate">Costa vs Durden</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- TOP MOBILE NAV / HEADER OUTLINE -->
+  <header class="border-b-4 border-ink py-8 mb-10 text-center px-4 max-w-4xl mx-auto">
+    <span class="font-mono text-xs uppercase tracking-widest text-accent-red font-bold block mb-1">LIVE FROM THE OCTAGON</span>
+    <h1 class="font-serif font-black text-4xl md:text-6xl uppercase tracking-tight text-ink">UFC 329 PREVIEW</h1>
+    <p class="font-mono text-xs uppercase tracking-widest text-ink-muted mt-3 border-y border-ink inline-block py-1.5 px-6">McGregor vs. Holloway 2 • Tactical Matrix Portal</p>
+    
+    <!-- Quick Inline Navigation Anchor Tags for Mobile Viewports -->
+    <div class="lg:hidden flex flex-wrap justify-center gap-2 mt-6 font-mono text-[9px] uppercase tracking-wider">
+      <a href="#main-card-zone" class="bg-ink text-paper-light px-2.5 py-1 rounded-sm">Main Card</a>
+      <a href="#prelims-zone" class="bg-paper-dark border border-ink px-2.5 py-1 rounded-sm">Prelims</a>
+      <a href="#early-prelims-zone" class="bg-paper-dark border border-ink px-2.5 py-1 rounded-sm">Early Prelims</a>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 pb-16">
+    
+    <!-- ==========================================
+         SECTION 1: THE MAIN CARD BLOCK
+         ========================================== -->
+    <section id="main-card-zone" class="mb-16 scroll-mt-6">
+      <div class="mb-8 border-b-4 border-ink pb-2">
+        <h2 class="font-mono text-sm uppercase tracking-widest text-accent-red font-black">✦ MAIN CARD FEATURE BREAKDOWNS</h2>
+      </div>
+
+      <!-- MAIN EVENT TACTICAL BREAKDOWN -->
+      <article id="fight-1" class="border-2 border-ink p-6 mb-12 bg-paper-light rounded-sm shadow-[8px_8px_0px_0px_var(--color-ink)] scroll-mt-6">
+        <div class="flex justify-between items-start flex-wrap gap-2 mb-2">
+          <span class="font-mono text-[10px] uppercase tracking-widest bg-accent-red text-paper-light px-2 py-0.5 font-bold rounded-sm">MAIN EVENT</span>
+          <span class="font-mono text-[10px] text-ink-muted">5 ROUNDS • FIVE STAR SCHEDULING</span>
+        </div>
+        <h2 class="font-serif font-black text-3xl md:text-5xl uppercase leading-tight mt-2 mb-2 text-ink">THE BLESSED WARRIOR VS. THE NOTORIOUS ICON: RENEWAL AT THE ZENITH</h2>
+        <p class="font-serif italic text-ink-muted text-lg mb-3">Max Holloway vs. Conor McGregor II</p>
+        <p class="font-mono text-[10px] uppercase text-ink-muted mb-4">By Tactical Analyst Desk • Jul 3, 2026 • 3 min read</p>
+        <blockquote class="border-l-4 border-accent-red pl-4 italic font-serif text-lg text-ink my-4">"This fight matters because it is the ultimate intersection of legacy and myth. It pits the fighter who breathes the gym against the fighter who conquered the business, representing a pure, unfiltered test of whether preparation and volume can dismantle the aura of a superstar. It is not just a regional clash; it is a battle for the soul of the sport, stripped of politics and reduced to two men testing their grit in the squared circle."</blockquote>
+        
+        <div class="font-serif text-sm leading-relaxed text-ink mt-6 space-y-4">
+          <div class="border-t border-ink/10 pt-4">
+            <h4 class="font-mono text-xs font-bold uppercase tracking-wider text-accent-red mb-1">I. THE BIOMECHANICAL EQUATION</h4>
+            <p>This is the classic immovable object meets the irresistible force. Holloway, the Hawaiian volume-puncher, operates with an aerobic engine that defies the laws of physiology; he is a master of the jab-to-cross rhythm, using a high-guard shell to dismantle opponents through sheer attrition and lateral movement. McGregor, conversely, remains the supreme sniper of the octagon. His karate-based stance, characterized by a wide base and deceptive reach, allows him to hunt for the kill with a devastating left cross. Where Holloway seeks to break a man’s spirit through a thousand cuts, McGregor seeks to end the evening with a singular, violent exclamation point. The collision centers on whether the Blessed pressure can force the Notorious into the deep, oxygen-starved waters of the championship rounds.</p>
+          </div>
+          
+          <div class="border-t border-ink/10 pt-4">
+            <h4 class="font-mono text-xs font-bold uppercase tracking-wider text-accent-red mb-1">II. CINEMATIC OUTCOME PREDICTION</h4>
+            <p>Round 1 opens with McGregor finding his range, popping the jab and feinting the left, while Holloway remains unphased, inching forward with that signature Hawaiian calm. By round 3, the pace intensifies; McGregor lands a crisp counter that drops Max, but the iron-chinned challenger bounces back, pouring on a relentless swarm of volume that shifts the momentum. As the fatigue mounts in the fourth, McGregor’s precision begins to wane, and the relentless Blessed barrage forces him against the cage. In a chaotic exchange, Holloway senses the opening, swarming with a flurry of hooks that forces the referee to intervene at 3:14 of the fourth round. An upset for the ages, decided by the depth of a man&#039;s gas tank.</p>
+          </div>
+          
+          <div class="border-t border-ink/10 pt-4">
+            <h4 class="font-mono text-xs font-bold uppercase tracking-wider text-accent-red mb-1">III. WHY THIS BATTLE MATTERS</h4>
+            <p>This fight matters because it is the ultimate intersection of legacy and myth. It pits the fighter who breathes the gym against the fighter who conquered the business, representing a pure, unfiltered test of whether preparation and volume can dismantle the aura of a superstar. It is not just a regional clash; it is a battle for the soul of the sport, stripped of politics and reduced to two men testing their grit in the squared circle.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- CO-MAIN EVENT BREAKDOWN -->
+      <article id="fight-2" class="border-2 border-ink p-6 mb-8 bg-paper-light rounded-sm shadow-[4px_4px_0px_0px_var(--color-ink)] scroll-mt-6">
+        <div class="flex justify-between items-start flex-wrap gap-2 mb-2">
+          <span class="font-mono text-[10px] uppercase tracking-widest bg-ink text-paper-light px-2 py-0.5 font-bold rounded-sm">CO-MAIN EVENT</span>
+          <span class="font-mono text-[10px] text-ink-muted">LIGHTWEIGHT BRIEFING</span>
+        </div>
+        <h3 class="font-serif font-black text-2xl md:text-3xl uppercase leading-tight mt-2 text-ink">THE LIVERPOOL SCALLYWAG VS. THE GOD OF WAR: BATTLE FOR EUROPEAN SUPREMACY</h3>
+        <p class="font-serif italic text-sm text-ink-muted mt-1 mb-3">Paddy Pimblett vs. Benoit Saint Denis</p>
+        <p class="font-mono text-[9px] uppercase text-ink-muted mb-4">By Tactical Analyst Desk • Jul 3, 2026 • 3 min read</p>
+        
+        <div class="font-serif text-sm leading-relaxed text-ink space-y-4 border-t border-ink/20 pt-4">
+          <p><strong>I. THE BIOMECHANICAL EQUATION:</strong> This is a collision between tactical opportunism and relentless attrition. Paddy &#039;The Baddy&#039; Pimblett brings a chaotic, submission-heavy grappling game fueled by unorthodox movement and high-level back-taking instincts. He thrives in the scramble, relying on opportunistic finishing ability to close the curtain. Opposing him is the monolith of violence, Benoit Saint Denis. The Frenchman operates with the surgical, high-pressure efficiency of his Special Forces background, utilizing a stiff, suffocating jab and a relentless pace that seeks to break an opponent&#039;s spirit before their body. Where Pimblett looks for the shortcut, Saint Denis looks for the annihilation.</p>
+          <p><strong>II. CINEMATIC OUTCOME PREDICTION:</strong> Round one opens with Saint Denis moving forward like a storm front, cutting off the cage and forcing Pimblett into a high-octane brawl. Pimblett tries to find space, landing stinging counters, but is pinned against the wire by the third minute. Round two sees the &#039;God of War&#039; dig to the body, sapping the energy from the Scouser&#039;s frame. As Pimblett tries a desperation Imanari roll, Saint Denis sprawls with clinical precision, raining down heavy elbows from top position. The fight reaches its crescendo in the third when Saint Denis traps Pimblett in a crucifix position, unloading a series of unanswered strikes until the referee intervenes at 3:12 of the final round.</p>
+          <p><strong>III. WHY THIS BATTLE MATTERS:</strong> This bout transcends the rankings; it is a clash of identities. It pits the modern, internet-era influencer fighter against the archetypal warrior who treats every cage walk like a mission objective. This is not about belts or bonuses; it is about proving which path—the charismatic showman or the cold-blooded operative—reigns supreme in the brutal crucible of the Lightweight division. To witness this is to see the true essence of the sport: the inevitable meeting of ambition and iron.</p>
+        </div>
+      </article>
+
+      <!-- CARD INDIVIDUAL FIXTURE 3 -->
+      <article id="fight-3" class="border-2 border-ink p-6 mb-8 bg-paper-light rounded-sm shadow-[4px_4px_0px_0px_var(--color-ink)] scroll-mt-6">
+        <div class="flex justify-between items-start flex-wrap gap-2 mb-2">
+          <span class="font-mono text-[10px] uppercase tracking-widest bg-accent-gold text-ink px-2 py-0.5 font-bold rounded-sm">MAIN CARD POOL</span>
+          <span class="font-mono text-[10px] text-ink-muted">BANTAMWEIGHT FIRES</span>
+        </div>
+        <h3 class="font-serif font-black text-2xl md:text-3xl uppercase leading-tight mt-2 text-ink">THE DURABLE ARTISAN VS. THE SANDMAN: A BANTAMWEIGHT OPERA AT THE FRONTIER</h3>
+        <p class="font-serif italic text-sm text-ink-muted mt-1 mb-3">Mario Bautista vs. Cory Sandhagen</p>
+        <p class="font-mono text-[9px] uppercase text-ink-muted mb-4">By Tactical Analyst Desk • Jul 3, 2026 • 3 min read</p>
+        
+        <div class="font-serif text-sm leading-relaxed text-ink space-y-4 border-t border-ink/20 pt-4">
+          <p><strong>I. THE BIOMECHANICAL EQUATION:</strong> This is a quintessential clash between tactical refinement and relentless forward pressure. Sandhagen operates from a complex, rhythmic stance—switching levels with the fluidity of a master fencer, utilizing his reach to paint outside the pocket and land stabbing linear strikes. Bautista counters this with a suffocating, grinding pressure game. He is the iron-jawed brawler who seeks to close the distance, neutralize the rhythm with clinch work, and initiate a grueling wrestling exchange where he can leverage his conditioning to break the opponent’s spirit. It is the surgical scalpel of Sandhagen against the tactical maul of Bautista.</p>
+          <p><strong>II. CINEMATIC OUTCOME PREDICTION:</strong> Round one begins with Sandhagen finding his range, stinging Bautista with sharp, stinging jabs that force a reset. By round two, the atmosphere thickens; Bautista finds his rhythm in the pocket, bull-rushing to force a fence-post wrestle. The grit of a former counselor against the technical craft of a career coach manifests in a stalemate of wills. In the third, Bautista’s suffocating pressure finally pins Sandhagen against the cage. Exhausted by the scramble, Sandhagen leaves an opening for a lightning-fast transition. Bautista secures a deep rear-naked choke during a desperate stand-up attempt, cinching the hold tight with 40 seconds remaining. A submission victory for the Arizona native in a war of attrition.</p>
+          <p><strong>III. WHY THIS BATTLE MATTERS:</strong> This fight represents the soul of the 135-pound division—a realm where mental fortitude is as vital as oxygen. We are witnessing two men who have balanced the brutal realities of the cage with the demands of service, whether in the classroom or the trauma ward. It is not just a fight for rankings; it is a display of the purest discipline, where two high-level tacticians test whose structural integrity remains intact when the furnace is turned up to maximum heat.</p>
+        </div>
+      </article>
+
+      <!-- CARD INDIVIDUAL FIXTURE 4 -->
+      <article id="fight-4" class="border-2 border-ink p-6 mb-8 bg-paper-light rounded-sm shadow-[4px_4px_0px_0px_var(--color-ink)] scroll-mt-6">
+        <div class="flex justify-between items-start flex-wrap gap-2 mb-2">
+          <span class="font-mono text-[10px] uppercase tracking-widest bg-ink text-paper-light px-2 py-0.5 font-bold rounded-sm">MAIN CARD OPENER</span>
+          <span class="font-mono text-[10px] text-ink-muted">FLYWEIGHT ACCELERATION</span>
+        </div>
+        <h3 class="font-serif font-black text-2xl md:text-3xl uppercase leading-tight mt-2 text-ink">THE KAVANAGH HURRICANE VS. THE RAW RAW ROYAL: FLYWEIGHT FURY IN THE CITY OF ANGELS</h3>
+        <p class="font-serif italic text-sm text-ink-muted mt-1 mb-3">Lone'er Kavanagh vs. Brandon Royval</p>
+        <p class="font-mono text-[9px] uppercase text-ink-muted mb-4">By Tactical Analyst Desk • Jul 3, 2026 • 3 min read</p>
+        
+        <div class="font-serif text-sm leading-relaxed text-ink space-y-4 border-t border-ink/20 pt-4">
+          <p><strong>I. THE BIOMECHANICAL EQUATION:</strong> Kavanagh enters the squared circle as a technical architect, a patient sniper who dissects the distance with surgical precision and blistering, unseen speed. Contrast this with the chaotic, high-octane scramble-wizardry of Brandon Royval. Where Kavanagh looks for the clean, rhythmic strike, Royval is the king of the &#039;controlled disaster,&#039; inviting exchanges that look like a street fight in a telephone booth. Kavanagh’s discipline meets Royval’s relentless, forward-marching pressure, creating a tactical collision where the surgical precision of the newcomer will be tested by the grizzled, high-stakes endurance of the veteran who has seen every trick in the book.</p>
+          <p><strong>II. CINEMATIC OUTCOME PREDICTION:</strong> Round one opens with a blistering pace as Royval looks to clinch and drain the lungs of his opponent, but Kavanagh finds his range early, landing a crisp counter-left that momentarily silences the arena. By round two, the &#039;Raw Dawg&#039; mentality takes over; Royval pulls the fight into the mud, forcing a frantic grappling exchange that sees both men bloodied against the fence. In the third, as fatigue threatens to cloud their judgment, Kavanagh slips a wild hook and pivots, catching Royval with a picture-perfect step-in knee that folds the veteran, forcing the referee to halt the fray at 3:12 of the final frame.</p>
+          <p><strong>III. WHY THIS BATTLE MATTERS:</strong> This is the quintessential clash of the rising sun versus the hardened dusk. Kavanagh represents the next generation of technical mastery, while Royval is the embodiment of the blue-collar spirit—the man who understands that in the flyweight division, your lungs and your courage are the only currencies that matter. It represents the purest martial test: can the blueprint beat the brawler, or will the grit of a former youth specialist shatter the poise of a blue-chip prospect? This fight isn&#039;t just about rankings; it’s about the soul of the sport.</p>
+        </div>
+      </article>
+    </section>
+
+    <!-- ==========================================
+         SECTION 2: PRELIMINARY CARD BLOCK
+         ========================================== -->
+    <section id="prelims-zone" class="mb-16 scroll-mt-6">
+      <div class="mb-8 border-b-4 border-ink pb-2">
+        <h2 class="font-mono text-sm uppercase tracking-widest text-accent-gold font-black">✦ TELEVISED PRELIMINARY SYNDICATE</h2>
+      </div>
+
+      <div class="space-y-6">
+        <!-- FIGHT 5 -->
+        <div id="fight-5" class="border border-ink p-5 bg-paper-dark/30 rounded-sm scroll-mt-6">
+          <span class="font-mono text-[9px] uppercase tracking-widest text-accent-gold font-bold">★ FEATURED PRELIM ★</span>
+          <h3 class="font-serif font-black text-xl uppercase mt-1 text-ink">THE EXPLOSIVE VS. THE ELASTIC: MCKINNEY AND GREEN COLLIDE IN THE LIGHTWEIGHT CRUCIBLE</h3>
+          <p class="font-serif italic text-xs text-ink-muted">Terrance McKinney vs. Bobby Ray Green</p>
+          <div class="font-serif text-xs leading-relaxed text-ink space-y-2 mt-3 pt-3 border-t border-ink/10">
+            <p><strong>I. THE BIOMECHANICAL EQUATION:</strong> Terrance McKinney enters as a tactical lightning strike, a high-octane pressure fighter whose wrestling-backed power possesses the ability to end a contest within the first three minutes. He operates at a cadence that demands immediate respect. Contrasting this is Bobby &#039;King&#039; Green, a defensive virtuoso who employs a Philly Shell-inspired stance, utilizing rhythmic shoulder rolls and constant motion to bait opponents into overcommitting. McKinney seeks the kinetic collision; Green seeks the subtle parry. The collision represents a test of whether raw, unbridled velocity can bypass the seasoned, fluid intuition of a veteran who has seen every trick the sport has to offer.</p>
+            <p><strong>II. CINEMATIC OUTCOME PREDICTION:</strong> The opening bell rings and McKinney charges, launching a knee that nearly clips the chin of the elusive Green. Round one sees McKinney frantic and heavy-handed, scoring a takedown that tests Green&#039;s composure, but Green works back to his feet with the calm of a man sitting in his own living room. By the second round, McKinney’s pace begins to betray his lungs. Green begins to find his rhythm, the flicking jab becoming a nuisance. Midway through the second, Green times a lunging hook from McKinney, countering with a crisp three-punch combination that wobbles the younger fighter. A final, precise right cross drops McKinney against the cage, forcing the referee to intervene as Green showcases his veteran clinical execution, securing a TKO victory at 3:14 of the second round.</p>
+            <p><strong>III. WHY THIS BATTLE MATTERS:</strong> This is the quintessential clash of the rising fire against the cooling embers of experience. It matters because it strips away the promotion and the lights to expose two men who treat the cage as a laboratory of human survival. McKinney represents the hungry, violent future of the division, while Green represents the preservation of the craft, proving that rhythm, head movement, and grit are just as formidable as raw athleticism. It is a fight for the soul of the Lightweight division, where the winner earns the right to dictate the pace of the next generation.</p>
+          </div>
+        </div>
+
+        <!-- FIGHT 6 -->
+        <div id="fight-6" class="border border-ink p-5 bg-paper-dark/30 rounded-sm scroll-mt-6">
+          <span class="font-mono text-[9px] uppercase tracking-widest text-ink-muted font-bold">★ LIGHT HEAVYWEIGHT PORTFOLIO ★</span>
+          <h3 class="font-serif font-black text-xl uppercase mt-1 text-ink">THE MINER VS. THE REAPER: THE SYDNEY-DONETSK SHOWDOWN AT 205</h3>
+          <p class="font-serif italic text-xs text-ink-muted">Nikita Krylov vs. Robert Whittaker</p>
+          <div class="font-serif text-xs leading-relaxed text-ink space-y-2 mt-3 pt-3 border-t border-ink/10">
+            <p><strong>I. THE BIOMECHANICAL EQUATION:</strong> This is a collision between the chaotic, unpredictable volatility of Nikita &#039;The Miner&#039; Krylov and the surgical, metronomic precision of Robert &#039;The Reaper&#039; Whittaker. Krylov operates with a frantic, sprawling violence, utilizing long-range strikes and opportunistic grappling transitions that thrive in the deep waters of a scramble. Whittaker, however, is a master of the entry-exit geometry. His blitzing combinations, predicated on a lightning-fast lead hand and a sniper-like cross, are designed to dismantle opponents before they can initiate the chaos that Krylov prefers. While Krylov holds the natural size and reach advantage, Whittaker’s footwork and lateral movement provide a tactical firewall against the reach of the Ukrainian powerhouse.</p>
+            <p><strong>II. CINEMATIC OUTCOME PREDICTION:</strong> Round one begins with Krylov pressing, testing the distance with heavy kicks, but Whittaker is a ghost in the pocket, parrying the lead hook and landing stinging counters. Round two sees the tide shift as Krylov attempts a desperate clinch game, but Whittaker’s defensive wrestling holds firm; he forces a reset with a piercing jab that swells Krylov’s eye. In the third, the fatigue of the pace sets in. Whittaker catches a lazy leg kick, pushes Krylov into the cage, and lands a crisp, shifting head-and-body combination that forces a referee intervention as &#039;The Miner&#039; crumbles under the clinical technical onslaught of &#039;The Reaper&#039;.</p>
+            <p><strong>III. WHY THIS BATTLE MATTERS:</strong> This fight represents the purest distillation of combat: the immovable iron of tactical discipline against the unbridled kinetic energy of a brawler. It is a testament to the grit required to remain relevant at the elite level, where one mistake is an invitation to oblivion. It matters because it is not about belts or rankings, but the sheer, primal satisfaction of seeing two men with granite chins and hearts of lions test which philosophy of violence can withstand the pressure of the other.</p>
+          </div>
+        </div>
+
+        <!-- FIGHT 7 -->
+        <div id="fight-7" class="border border-ink p-5 bg-paper-dark/30 rounded-sm scroll-mt-6">
+          <span class="font-mono text-[9px] uppercase tracking-widest text-ink-muted font-bold">★ HEAVYWEIGHT TILES ★</span>
+          <h3 class="font-serif font-black text-xl uppercase mt-1 text-ink">THE ARBORIST VERSUS THE OLYMPIAN: COLLISION AT THE HEAVYWEIGHT FRONTIER</h3>
+          <p class="font-serif italic text-xs text-ink-muted">Elisha Ellison vs. Gable Steveson</p>
+          <div class="font-serif text-xs leading-relaxed text-ink space-y-2 mt-3 pt-3 border-t border-ink/10">
+            <p><strong>I. THE BIOMECHANICAL EQUATION:</strong> This is a quintessential clash between functional strength and elite tactical grappling. Ellison, forged in the daily grind of felling timber and operating heavy iron, possesses a dense, industrial-grade durability and a crushing, rudimentary clinch that stifles rhythm. Opposing him is Steveson, the gold-medalist wrestling prodigy whose explosive lateral movement, lightning-fast double-leg entries, and freakish athletic pedigree make him the most dangerous stylistic puzzle in the division. While Ellison seeks to turn the cage into a phone booth and break his opponent through sheer manual labor, Steveson aims to turn the fight into a track meet, using level changes that threaten to take the floor out from under the arborist.</p>
+            <p><strong>II. CINEMATIC OUTCOME PREDICTION:</strong> Round one opens with Ellison marching forward, heavy hands pawing at the air, attempting to pin the wrestler against the fence. Steveson circles with grace, stinging Ellison with sharp, disciplined jabs. Halfway through the second, Ellison manages a crushing body lock, but Steveson’s balance is ethereal; he pivots, executes a picture-perfect lateral drop, and initiates a scramble that leaves Ellison winded. By the third round, the output disparity becomes glaring. A lightning-quick Steveson high-crotch takedown transitions immediately into a dominant back-take, ending the contest via rear-naked choke as the arborist’s legendary grit finally hits the wall of world-class technical precision.</p>
+            <p><strong>III. WHY THIS BATTLE MATTERS:</strong> This bout is a referendum on the nature of combat: does the raw, calloused power of the working man hold ground against the polished, genetic mastery of the Olympian? It matters because it asks if a fighter can bridge the gap from a day job in the forest to the bright lights of the Octagon. It is a spectacle of the human spirit—the blue-collar veteran fighting for glory against the golden child fighting for legacy, proving that on any given night, a regional scrap can carry the weight of a world title.</p>
+          </div>
+        </div>
+
+        <!-- FIGHT 8 -->
+        <div id="fight-8" class="border border-ink p-5 bg-paper-dark/30 rounded-sm scroll-mt-6">
+          <span class="font-mono text-[9px] uppercase tracking-widest text-ink-muted font-bold">★ BANTAMWEIGHT STRATIFICATION ★</span>
+          <h3 class="font-serif font-black text-xl uppercase mt-1 text-ink">THE TEXAS SHARPSHOOTER VS. THE UHRICHSVILLE BRAWLER: A BANTAMWEIGHT COLLISION AT THE SUMMIT</h3>
+          <p class="font-serif italic text-xs text-ink-muted">Adrian Yanez vs. Cody Garbrandt</p>
+          <div class="font-serif text-xs leading-relaxed text-ink space-y-2 mt-3 pt-3 border-t border-ink/10">
+            <p><strong>I. THE BIOMECHANICAL EQUATION:</strong> This is a quintessential meeting of high-fidelity precision versus the chaotic, explosive velocity of the old guard. Yanez operates with a rhythmic, disciplined boxing base, utilizing a laser-sighted jab and a counter-punching game that punishes the slightest lapse in composure. He is the surgeon with a four-ounce glove. Conversely, Garbrandt represents the kinetic hurricane. His stance is built for the sudden, violent closing of distance, relying on world-class hand speed and a wrestling pedigree that he keeps under wraps until he needs to turn the fight into a phone-booth brawl. The technical collision centers on tempo: can Yanez maintain his clinical distance, or will Garbrandt successfully bait him into an erratic exchange where the former champion&#039;s explosive power reign supreme?</p>
+            <p><strong>II. CINEMATIC OUTCOME PREDICTION:</strong> The opening bell rings to a deafening roar as both men refuse to touch gloves. Round one sees Yanez picking his spots, scoring with crisp 1-2 combinations that draw blood from the bridge of Garbrandt’s nose. In the second, the intensity shifts; Garbrandt feints, steps inside, and catches Yanez with a sweeping overhand right that wobbles the Texan against the cage. The crowd erupts as Garbrandt pours on the volume, but Yanez shows the composure of a master, bypassing the wild hooks. By the third, the fatigue of the pace catches up. Yanez times a heavy front-foot entry, sliding perfectly to the side and uncorking a walk-off counter-right hook that snaps Garbrandt&#039;s head back. The ref waves it off at 3:12 of the final round—a violent, technical masterpiece that reinforces Yanez as the bantamweight division&#039;s most dangerous technician.</p>
+            <p><strong>III. WHY THIS BATTLE MATTERS:</strong> This fight matters because it is a referendum on the evolution of the 135-pound division. You have a battle-hardened former king looking to reclaim his throne against a methodical craftsman striving to cement his status as the new generation’s gatekeeper. It is the purest form of human contest—a test of who can process information faster under the threat of physical oblivion. In a world of hype and social media posturing, these two men provide the only thing that matters: the honest, brutal arithmetic of the fist.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 3: EARLY PRELIMS GRID BLOCK
+         ========================================== -->
+    <section id="early-prelims-zone" class="mb-14 scroll-mt-6">
+      <div class="mb-8 border-b-4 border-ink pb-2">
+        <h2 class="font-mono text-sm uppercase tracking-widest text-ink-muted font-black">✦ FIGHT PASS EARLY DIGITAL PRELIMS</h2>
+      </div>
+
+      <!-- USING EXPANDABLE MATRIX BLOCKS TO DELIVER RAW FULL TEXT ACCESSIBLY -->
+      <div class="space-y-4">
+        <!-- FIGHT 9 -->
+        <details id="fight-9" class="border border-ink/30 p-4 bg-paper-light rounded-sm group scroll-mt-6">
+          <summary class="cursor-pointer list-none flex justify-between items-center flex-wrap gap-2">
+            <div>
+              <span class="font-mono text-[9px] uppercase tracking-widest text-ink-muted font-bold">★ FEATHERWEIGHT RECORD ★</span>
+              <h3 class="font-serif font-black text-lg uppercase leading-tight mt-0.5 text-ink">THE UNDEFEATED PRODIGY VS. THE IRON-CHINNED VETERAN</h3>
+              <p class="font-serif italic text-xs text-ink-muted mt-0.5">Luke Riley vs. Kai Kamaka III</p>
+            </div>
+            <span class="font-mono text-[10px] text-accent-red font-bold group-open:hidden">▼ CLICKS TO ACCESS MATRIX</span>
+            <span class="font-mono text-[10px] text-accent-red font-bold hidden group-open:inline">▲ COLLAPSE BRIEFING</span>
+          </summary>
+          <div class="font-serif text-xs leading-relaxed text-ink space-y-3 mt-4 pt-4 border-t border-ink/20">
+            <p><strong>I. THE BIOMECHANICAL EQUATION:</strong> Luke Riley enters the squared circle as a technical marauder, possessing a crisp, distance-closing jab and a wrestling pedigree that forces opponents into a suffocating clinch. He relies on spatial manipulation to dictate the pace. Kai Kamaka III, however, is a stylistic nightmare of pure, rhythmic violence. A pressure-heavy brawler with the gas tank of a marathon runner, Kamaka employs a high-volume boxing approach coupled with a relentless takedown-defense wall. The technical collision centers on whether Riley can secure his takedowns against Kamaka’s iron-willed scrambling, or if Kamaka can drag the undefeated prospect into deep, punishing waters where technical precision dissolves into a war of attrition.</p>
+            <p><strong>II. CINEMATIC OUTCOME PREDICTION:</strong> Round 1 opens with Riley testing the waters, snapping sharp counters that land clean, but Kamaka absorbs the punishment like a seasoned veteran, moving forward with a grin. By Round 2, the pace intensifies; Kamaka begins to land heavy hooks inside the pocket, forcing Riley to abandon his tactical perimeter and engage in a phone-booth brawl. In the third, the fatigue of the war sets in. Riley attempts a desperate double-leg, but Kamaka sprawls with expert timing, reverses the position, and rains down thunderous ground-and-pound. With the crowd roaring, Kamaka forces a standing TKO stoppage at 3:42 of the final round, snapping the streak and proving that experience is the deadliest weapon in the cage.</p>
+            <p><strong>III. WHY THIS BATTLE MATTERS:</strong> This bout represents the quintessential pugilistic narrative: the rise of a blue-chip prospect colliding with the immovable object of a tested veteran. It is a referendum on the nature of potential versus the reality of hardened, calloused-knuckle persistence. In an era of manufactured drama, this fight is a throwback to when the only thing that mattered was who could weather the storm, stand their ground, and leave the cage with their hand raised in the face of absolute adversity.</p>
+          </div>
+        </details>
+
+        <!-- FIGHT 10 -->
+        <details id="fight-10" class="border border-ink/30 p-4 bg-paper-light rounded-sm group scroll-mt-6">
+          <summary class="cursor-pointer list-none flex justify-between items-center flex-wrap gap-2">
+            <div>
+              <span class="font-mono text-[9px] uppercase tracking-widest text-ink-muted font-bold">★ WOMEN'S FLYWEIGHT ★</span>
+              <h3 class="font-serif font-black text-lg uppercase leading-tight mt-0.5 text-ink">THE SANDA STRIKER VS. THE ARIZONA GRIT</h3>
+              <p class="font-serif italic text-xs text-ink-muted mt-0.5">Cong Wang vs. Tracy Cortez</p>
+            </div>
+            <span class="font-mono text-[10px] text-accent-red font-bold group-open:hidden">▼ CLICKS TO ACCESS MATRIX</span>
+            <span class="font-mono text-[10px] text-accent-red font-bold hidden group-open:inline">▲ COLLAPSE BRIEFING</span>
+          </summary>
+          <div class="font-serif text-xs leading-relaxed text-ink space-y-3 mt-4 pt-4 border-t border-ink/20">
+            <p><strong>I. THE BIOMECHANICAL EQUATION:</strong> Cong Wang enters the squared circle as a master of the kinetic arts, bringing the high-velocity, snap-heavy precision of elite-level Sanda to the Octagon. She is a sniper, utilizing side kicks and rapid-fire combinations to dictate distance. Conversely, Tracy Cortez is the embodiment of the grinding, blue-collar wrestling ethos. Cortez relies on clinch control, suffocating pressure, and an unbreakable gas tank to turn technical scraps into physical wars of attrition. Wang seeks the spectacular knockout at range, while Cortez demands a grueling tactical stalemate that forces her opponent into the deep, suffocating waters of the cage wall.</p>
+            <p><strong>II. CINEMATIC OUTCOME PREDICTION:</strong> The opening bell rings and the disparity is immediate; Wang keeps Cortez on the periphery, peppering her with lead-hand stings and crisp leg kicks. By round two, Cortez finds the entry, bull-rushing into the clinch to stifle the Sanda artist&#039;s rhythm. The arena turns into a pressure cooker. Just as Cortez looks to grind out a decision, Wang executes a clinical lateral pivot, planting a perfectly timed spinning backfist that finds the temple. Cortez crashes to the canvas, and Wang follows up with a precision strike to seal a TKO victory at 3:12 of the third, proving that in this game, speed and technique can still solve the riddle of sheer physical will.</p>
+            <p><strong>III. WHY THIS BATTLE MATTERS:</strong> This bout is the quintessential study in the evolution of combat sports. It pits the distilled, disciplined roots of traditional Chinese martial arts against the rugged, modern American wrestling grinder. It is not just about the rankings; it is about the purity of the stylistic puzzle. When Wang faces Cortez, we aren&#039;t just watching two fighters; we are watching the old world of refined technique meeting the new world of relentless attrition. This is a must-see for any true student of the fight game.</p>
+          </div>
+        </details>
+
+        <!-- FIGHT 11 -->
+        <details id="fight-11" class="border border-ink/30 p-4 bg-paper-light rounded-sm group scroll-mt-6">
+          <summary class="cursor-pointer list-none flex justify-between items-center flex-wrap gap-2">
+            <div>
+              <span class="font-mono text-[9px] uppercase tracking-widest text-ink-muted font-bold">★ MIDDLEWEIGHT METALS ★</span>
+              <h3 class="font-serif font-black text-lg uppercase leading-tight mt-0.5 text-ink">THE KICKBOXING KING VS. THE GRITTY GRAPPLER</h3>
+              <p class="font-serif italic text-xs text-ink-muted mt-0.5">César Almeida vs. Damian Pinas</p>
+            </div>
+            <span class="font-mono text-[10px] text-accent-red font-bold group-open:hidden">▼ CLICKS TO ACCESS MATRIX</span>
+            <span class="font-mono text-[10px] text-accent-red font-bold hidden group-open:inline">▲ COLLAPSE BRIEFING</span>
+          </summary>
+          <div class="font-serif text-xs leading-relaxed text-ink space-y-3 mt-4 pt-4 border-t border-ink/20">
+            <p><strong>I. THE BIOMECHANICAL EQUATION:</strong> This is a quintessential clash between the technical artisan and the relentless pressure cooker. César Almeida brings the lethal, measured precision of an elite kickboxing pedigree, utilizing long-range calf kicks and piercing straight punches that dismantle opponents systematically. Damian Pinas, conversely, operates with the frantic, heavy-handed energy of a man who refuses to yield an inch of canvas, looking to close the distance, clinch, and stifle Almeida&#039;s rhythmic striking with suffocating physicality.</p>
+            <p><strong>II. CINEMATIC OUTCOME PREDICTION:</strong> Round one opens with Almeida testing the range, flicking out jabs that connect with snap; Pinas eats them to force a clinch against the fence, testing the champion&#039;s composure. Round two sees Almeida find his flow, punishing Pinas with a devastating body kick that visibly drains the Dutchman&#039;s gas tank. In the third, as Pinas desperate-charges for a takedown, Almeida steps into a textbook knee, catching Pinas flush on the chin. The referee waves it off at 2:14 of the third, as Almeida proves that technique remains the ultimate equalizer in the cage.</p>
+            <p><strong>III. WHY THIS BATTLE MATTERS:</strong> This fight represents the soul of the regional circuit graduating to the big stage; it is a battle between the intellectual refinement of striking and the raw, blue-collar hunger of a fighter who treats every exchange as a life-or-death survival match. It is the purest distillation of combat—the pursuit of perfection versus the refusal to break.</p>
+          </div>
+        </details>
+
+        <!-- FIGHT 12 -->
+        <details id="fight-12" class="border border-ink/30 p-4 bg-paper-light rounded-sm group scroll-mt-6">
+          <summary class="cursor-pointer list-none flex justify-between items-center flex-wrap gap-2">
+            <div>
+              <span class="font-mono text-[9px] uppercase tracking-widest text-ink-muted font-bold">★ MIDDLEWEIGHT FOUNDRY ★</span>
+              <h3 class="font-serif font-black text-lg uppercase leading-tight mt-0.5 text-ink">THE IRON LUNG VS. THE ARCHITECT</h3>
+              <p class="font-serif italic text-xs text-ink-muted mt-0.5">Zach Reese vs. Ryan Gandra</p>
+            </div>
+            <span class="font-mono text-[10px] text-accent-red font-bold group-open:hidden">▼ CLICKS TO ACCESS MATRIX</span>
+            <span class="font-mono text-[10px] text-accent-red font-bold hidden group-open:inline">▲ COLLAPSE BRIEFING</span>
+          </summary>
+          <div class="font-serif text-xs leading-relaxed text-ink space-y-3 mt-4 pt-4 border-t border-ink/20">
+            <p><strong>I. THE BIOMECHANICAL EQUATION:</strong> This is a collision between Zach Reese’s high-octane, sink-or-swim aggression and Ryan Gandra’s clinical, methodical execution. Reese brings a chaotic, forward-pressing pressure that forces opponents to abandon their game plan in favor of pure survival. He fights with the reckless abandonment of a man who knows he is one sequence away from a knockout. Gandra, conversely, operates like a surgeon. His stance is balanced, his footwork calculated to neutralize lateral movement, and his defensive shell is a fortress. Where Reese looks to ignite a wildfire, Gandra seeks to systematically dismantle the foundation, trading reckless power for high-percentage counter-striking.</p>
+            <p><strong>II. CINEMATIC OUTCOME PREDICTION:</strong> Round one opens with Reese storming the gates, winging heavy hooks that force Gandra onto his back foot. Gandra absorbs the initial shock, moving with a calm, rhythmic precision that allows him to slip the heavy leather. By the second, the pace takes its toll; Reese’s output remains high, but his movements lose their snap. Gandra identifies the opening, timing a perfectly placed intercepting knee as Reese closes the distance. The knockdown is clean, and the follow-up ground-and-pound is a masterclass in controlled violence, forcing the referee to step in before the three-minute mark of the frame.</p>
+            <p><strong>III. WHY THIS BATTLE MATTERS:</strong> This bout represents the lifeblood of the division: two hungry wolves fighting for the scraps that eventually build a champion. It matters because it strips away the glitz of the pay-per-view stage and forces two men to prove their mettle in a stylistic war where only one man&#039;s philosophy can prevail. It is a reminder that in the middleweight trenches, one misstep is not just a loss, but a narrative-altering tragedy.</p>
+          </div>
+        </details>
+
+        <!-- FIGHT 13 -->
+        <details id="fight-13" class="border border-ink/30 p-4 bg-paper-light rounded-sm group scroll-mt-6">
+          <summary class="cursor-pointer list-none flex justify-between items-center flex-wrap gap-2">
+            <div>
+              <span class="font-mono text-[9px] uppercase tracking-widest text-ink-muted font-bold">★ CARD OPENING ACCELERATION ★</span>
+              <h3 class="font-serif font-black text-lg uppercase leading-tight mt-0.5 text-ink">THE SUBMISSION SCHOLAR VS. THE CLAY-COUNTY GRINDER</h3>
+              <p class="font-serif italic text-xs text-ink-muted mt-0.5">Alessandro Costa vs. Cody Durden</p>
+            </div>
+            <span class="font-mono text-[10px] text-accent-red font-bold group-open:hidden">▼ CLICKS TO ACCESS MATRIX</span>
+            <span class="font-mono text-[10px] text-accent-red font-bold hidden group-open:inline">▲ COLLAPSE BRIEFING</span>
+          </summary>
+          <div class="font-serif text-xs leading-relaxed text-ink space-y-3 mt-4 pt-4 border-t border-ink/20">
+            <p><strong>I. THE BIOMECHANICAL EQUATION:</strong> This is a classic collision of elemental forces: the surgical execution of the Brazilian Jiu-Jitsu instructor versus the raw, unyielding pressure of the American blue-collar wrestler. Alessandro Costa brings a deadly combination of explosive counter-punching and elite submission wizardry, honed from thousands of hours teaching the gentle art. Cody Durden is a grinder of the highest order, a fighter who thrives in the ugly spaces of the cage, using relentless double-leg takedowns, heavy top control, and a sheer refusal to break. While Costa seeks to establish distance and time his heavy right hand before dragging the fight into his world of sweeps and submissions, Durden wants to turn this into a phone-booth war of attrition, neutralizing Costa&#039;s leverage with smothering chest-to-chest pressure.</p>
+            <p><strong>II. CINEMATIC OUTCOME PREDICTION:</strong> In a hypothetical fifteen-minute main-event undercard spot, the drama unfolds with high-octane tension. Round one begins with Durden marching forward, eating a sharp leg kick from Costa but successfully driving the Brazilian against the fence. For four minutes, Durden grinds Costa into the wire, landing short elbows and stifling any offensive guard work. In round two, the pace catches up. Durden shoots for a fatigued double-leg, but Costa anticipates the level change. Costa fires a brutal, short uppercut that wobbles the wrestler. As Durden desperately dives to salvage the takedown, Costa instantly wraps his neck, rolling into a tight guillotine choke. Durden fights the hands with blue-collar grit, but the squeeze of the jiu-juice professor is academic. Durden is forced to tap at 3:14 of the second round.</p>
+            <p><strong>III. WHY THIS BATTLE MATTERS:</strong> This is the raw, unvarnished heart of prize fighting. Before the millions of dollars and arena lights, the sport belongs to the grinders and the instructors—the men who work the mats by day and bleed under the hot lights by night. Costa versus Durden is a testament to the eternal struggle between grappling philosophies, proving that the undercard is where the purest drama in sports is forged.</p>
+          </div>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <!-- RE-BRANDED FOOTER AREA -->
+  <footer class="border-t-2 border-ink py-8 text-center font-mono text-[10px] uppercase tracking-widest text-ink-muted lg:pl-4">
+    © 2026 UFC 329 Media Preview Portal • Dynamic Structural Build Verified • All Rights Reserved
+  </footer>
+</body>
+</html>
